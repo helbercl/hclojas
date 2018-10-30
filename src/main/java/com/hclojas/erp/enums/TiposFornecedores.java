@@ -1,7 +1,7 @@
 package com.hclojas.erp.enums;
 
 public enum TiposFornecedores {
-	MEI("MicroEmpreendedor Individual"), EIRELI("Empresa Individual de Resposnsabilidade Limitada"),
+	MEI("MicroEmpreendedor Individual"), EIRELI("Empresa Individual de Responsabilidade Limitada"),
 	LTDA(" Sociedade Limitada"), SA("Sociedade Anonima");
 
 	private String descricao;
