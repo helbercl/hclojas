@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/templates/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:define name="corpo">
+		<h:form id="frm_funcionarios">
+			<p:separator />
+			<p:wizard id="wiz_funcionarios" showStepStatus="true"
+				showNavBar="true">
+				<p:tab id="tb_dados_basicos" title="Funcionarios">
+					<p:panel id="pn_dados_basicos" header="Dados Basicos">
+						<h:panelGrid columns="4">
+
+							<p:outputLabel id="opt_nome" value="Nome:" for="ipt_nome" />
+							<p:inputText id="ipt_nome" title="Informe o nome!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="20"
+								maxlength="50" />
+
+							<p:outputLabel id="opl_email" value="E-mail:" for="ipt_mail" />
+							<p:inputText id="ipt_mail" title="Informe o e-mail!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+
+							<p:outputLabel id="opt_login" value="Login:" for="ipt_login" />
+							<p:inputText id="ipt_login" title="Informe o Login!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+
+							<p:outputLabel id="opl_cpf" value="Cpf:" for="ipl_cpf" />
+							<p:inputMask id="ipl_cpf" mask="999.999.999-99" required="true" />
+
+							<p:outputLabel id="opt_situacao" for="sor_situacao"
+								value="Situacao:" />
+							<p:selectOneRadio id="sor_situacao">
+								<f:selectItem itemLabel="Ativo" itemValue="S" />
+								<f:selectItem itemLabel="Inativo" itemValue="N" />
+							</p:selectOneRadio>
+
+							<p:outputLabel id="opt_sexo" for="sor_sexo" value="Sexo:" />
+							<p:selectOneRadio id="sor_sexo">
+								<f:selectItem itemLabel="Masculino" itemValue="M" />
+								<f:selectItem itemLabel="Feminino" itemValue="F" />
+							</p:selectOneRadio>
+
+							<!-- 							<p:commandButton id="btn_gravar" value="Gravar" /> -->
+
+						</h:panelGrid>
+					</p:panel>
+				</p:tab>
+
+
+				<p:tab id="tb_dados_extras" title="Dados Extras">
+					<p:panel id="pn_dados_extras" header="Dados Extras">
+						<h:panelGrid columns="4">
+
+							<p:outputLabel id="opl_rg" for="ipl_rg" value="RG:" />
+							<p:inputMask id="ipl_rg" mask="9.999.999-9" />
+
+							<p:outputLabel id="opl_ctps" for="ipl_ctps" value="CTPS:" />
+							<p:inputMask id="ipl_ctps" mask="999.999.999-99" />
+
+							<p:outputLabel id="opl_pis" for="ipl_pis" value="PIS/PASEP:" />
+							<p:inputMask id="ipl_pis" mask="999.999.999-99" />
+
+							<p:outputLabel id="opl_data_nascimento" for="cal_data_nascimento"
+								value="Data de Nascimento :" />
+							<p:calendar id="cal_data_nascimento" mask="99-99-9999"
+								mode="popup" navigator="true" pattern="dd-mm-yyyy" />
+
+							<p:outputLabel id="opl_data_obito" for="cal_data_obito"
+								value="Data de Óbito :" />
+							<p:calendar id="cal_data_obito" mask="99-99-9999" mode="popup"
+								navigator="true" pattern="dd-mm-yyyy" />
+
+							<p:outputLabel id="opt_nome_pai" value="Nome do Pai:"
+								for="ipt_nome_pai" />
+							<p:inputText id="ipt_nome_pai" title="Informe o nome do Pai!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+
+							<p:outputLabel id="opt_nome_mae" value="Nome da Mãe:"
+								for="ipt_nome_mae" />
+							<p:inputText id="ipt_nome_mae" title="Informe o nome da Mãe!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+
+							<p:outputLabel id="opl_nr_celular" for="ipl_nr_celular"
+								value="Nº Celular:" />
+							<p:inputMask id="ipl_nr_celular" mask="(99)99999-9999" />
+
+							<p:outputLabel id="opl_nr_residencial" for="ipl_nr_residencial"
+								value="Nº Residêncial" />
+							<p:inputMask id="ipl_nr_residencial" mask="(99)9999-9999" />
+
+							<p:outputLabel id="opl_cep" for="ipl_cep" value="Cep:" />
+							<p:inputMask id="ipl_cep" mask="99999-999" />
+
+							<p:outputLabel id="opt_endereco" value="Endereço:"
+								for="ipt_endereco" />
+							<p:inputText id="ipt_endereco" title="Informe o endereço!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="50" />
+
+							<p:outputLabel id="opt_complemento" value="Complemento:"
+								for="ipt_complemento" />
+							<p:inputText id="ipt_complemento" title="Informe o complemento:!"
+								required="true" requiredMessage="Campo Obrigatorio!" size="100" />
+
+							<p:outputLabel id="opt_estado" value="Estado:" for="som_estado" />
+							<p:selectOneMenu id="som_estado" filter="true"
+								filterMatchMode="startsWith">
+								<f:selectItems>
+									<f:selectItem value="#{}"></f:selectItem>
+								</f:selectItems>
+
+							</p:selectOneMenu>
+
+
+						</h:panelGrid>
+					</p:panel>
+				</p:tab>
+			</p:wizard>
+
+		</h:form>
+	</ui:define>
+</ui:composition>

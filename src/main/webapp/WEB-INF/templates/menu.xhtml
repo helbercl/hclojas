@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<nav class="aw-menu">
+		<h:form id="menu">
+			<p:menubar autoDisplay="true">
+				<p:submenu label="Home" />	
+				<p:submenu label="Cadastros Básicos">
+					<p:submenu label="Funcionario">
+						<p:menuitem value="Cadastro" />
+						<p:menuitem value="Pesquisar" />
+					</p:submenu>
+					<p:submenu label="Cliente">
+						<p:menuitem value="Cadastro" />
+						<p:menuitem value="Pesquisar" />
+					</p:submenu>
+					<p:submenu label="Fornecedor">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+				</p:submenu>
+				<p:submenu label="Cadastros Auxiliares">
+					<p:submenu label="Grupo Produtos">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+					<p:submenu label="SubGrupo Produtos">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+					<p:submenu label="SubSubGrupo Produtos">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+					<p:submenu label="Grupo Clientes">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+					<p:submenu label="SubGrupo Clientes">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+					<p:submenu label="SubSubGrupo Produtos">
+						<p:menuitem value="Cadastro" url="#" />
+						<p:menuitem value="Pesquisar" url="#" />
+					</p:submenu>
+
+				</p:submenu>
+				<p:submenu label="Sair" />
+
+			</p:menubar>
+		</h:form>
+	</nav>
+
+</ui:composition>
