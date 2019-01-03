@@ -7,21 +7,21 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 	<ui:define name="corpo">
 		<h:form id="frm_funcionarios">
-			<p:separator />
+			
 			<p:wizard id="wiz_funcionarios" showStepStatus="true"
-				showNavBar="true">
+				showNavBar="true" backLabel="Voltar" nextLabel="Prosseguir">
 				<p:tab id="tb_dados_basicos" title="Funcionarios">
 					<p:panel id="pn_dados_basicos" header="Dados Basicos">
 						<h:panelGrid columns="4">
 
 							<p:outputLabel id="opt_nome" value="Nome:" for="ipt_nome" />
 							<p:inputText id="ipt_nome" title="Informe o nome!"
-								required="true" requiredMessage="Campo Obrigatorio!" size="20"
+								required="true" requiredMessage="Campo Obrigatorio!" size="50"
 								maxlength="50" />
 
 							<p:outputLabel id="opl_email" value="E-mail:" for="ipt_mail" />
 							<p:inputText id="ipt_mail" title="Informe o e-mail!"
-								required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+								required="true" requiredMessage="Campo Obrigatorio!" size="30" />
 
 							<p:outputLabel id="opt_login" value="Login:" for="ipt_login" />
 							<p:inputText id="ipt_login" title="Informe o Login!"
@@ -42,8 +42,6 @@
 								<f:selectItem itemLabel="Masculino" itemValue="M" />
 								<f:selectItem itemLabel="Feminino" itemValue="F" />
 							</p:selectOneRadio>
-
-							<!-- 							<p:commandButton id="btn_gravar" value="Gravar" /> -->
 
 						</h:panelGrid>
 					</p:panel>
@@ -102,14 +100,12 @@
 							<p:outputLabel id="opt_complemento" value="Complemento:"
 								for="ipt_complemento" />
 							<p:inputText id="ipt_complemento" title="Informe o complemento:!"
-								required="true" requiredMessage="Campo Obrigatorio!" size="100" />
+								required="true" requiredMessage="Campo Obrigatorio!" size="50" />
 
 							<p:outputLabel id="opt_estado" value="Estado:" for="som_estado" />
 							<p:selectOneMenu id="som_estado" filter="true"
 								filterMatchMode="startsWith">
-								<f:selectItems>
-									<f:selectItem value="#{}"></f:selectItem>
-								</f:selectItems>
+								
 
 							</p:selectOneMenu>
 

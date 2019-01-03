@@ -5,11 +5,11 @@
 	<nav class="aw-menu">
 		<h:form id="menu">
 			<p:menubar autoDisplay="true">
-				<p:submenu label="Home" />	
+				<p:submenu label="Home" />
 				<p:submenu label="Cadastros Básicos">
 					<p:submenu label="Funcionario">
-						<p:menuitem value="Cadastro" />
-						<p:menuitem value="Pesquisar" />
+						<p:menuitem value="Cadastro" url="cadastro/funcionarios/funcionarios.xhtml" />
+						<p:menuitem value="Pesquisar" url="cadastro/funcionarios/pesquisar.xhtml" />
 					</p:submenu>
 					<p:submenu label="Cliente">
 						<p:menuitem value="Cadastro" />
@@ -48,7 +48,6 @@
 
 				</p:submenu>
 				<p:submenu label="Sair" />
-
 			</p:menubar>
 		</h:form>
 	</nav>

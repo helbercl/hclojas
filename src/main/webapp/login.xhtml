@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
-<ui:composition template="/WEB-INF/templates/layout.xhtml"
+<ui:composition template="/WEB-INF/templates/layou_login.xhtml"
  xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 	<ui:define name="corpo">
-		<h:form id="frm_login">
-			<p:panel id="pn_login" header="Login/Acesso">
-				<h:panelGrid columns="2">
+	<h:form id="frm_login" >
+			<p:panel id="pn_login" header="Login/Acesso" footer="HCLOJAS - Sistemas de Vendas">
+				<h:panelGrid columns="2" >
 					<p:outputLabel id="opt_login" value="Login:" for="ipt_login"/>
 					<p:inputText id="ipt_login" title="Informe o login!"
 						required="true" requiredMessage="Campo Obrigatorio!" size="20" />
@@ -21,9 +21,12 @@
 
 
 
-					<p:outputLabel id="lbl_dominio" value="Domínio" />
-					<p:inputText id="opt_dominio" title="Informe o Dominio!"
+					<p:outputLabel id="opl_dominio" value="Domínio" for="ipt_dominio" />
+					<p:inputText id="ipt_dominio" title="Informe o Dominio!"
 						required="true" requiredMessage="Campo Obrigatorio!" size="20" />
+						
+				    <p:outputLabel id="opl_captcha" value="Captcha" for="cap_captcha"/>
+				    <p:captcha id="cap_captcha" required="true" theme="dark" />
 
 					<p:outputLabel />
 					<p:commandButton id="btn_acessar" value="Acessar" />

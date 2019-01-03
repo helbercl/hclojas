@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/templates/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:define name="corpo">
+		<h:form id="frm_funcionarios_pesquisar">
+			<p:panel id="pn_funcionarios_pesquisar"
+				header="Pesquisar Funcionarios">
+				<h:panelGrid columns="2">
+
+					<p:outputLabel id="opt_nome" value="Nome:" for="ipt_nome" />
+					<p:inputText id="ipt_nome" title="Informe o nome!" required="true"
+						requiredMessage="Campo Obrigatorio!" size="50" maxlength="50" />
+
+					<p:outputLabel id="opl_cpf" value="Cpf:" for="ipl_cpf" />
+					<p:inputMask id="ipl_cpf" mask="999.999.999-99" required="true" />
+
+					<p:outputLabel id="opt_situacao" for="sor_situacao"
+						value="Situacao:" />
+					<p:selectOneRadio id="sor_situacao">
+						<f:selectItem itemLabel="Ativo" itemValue="S" />
+						<f:selectItem itemLabel="Inativo" itemValue="N" />
+					</p:selectOneRadio>
+					<p:outputLabel/>
+                    <p:commandButton id="cmb_pesquisar" value="Pesquisar"/>
+				</h:panelGrid>
+			</p:panel>
+			 <p:separator/>
+			<p:panel id="pn_lista_funcionarios"  header="Lista Funcionarios">
+			  <p:dataTable id="dtb_funcionarios" var="funcionarios" >
+			   <p:column>
+			     <f:facet name="header">
+			         <h:outputText name="Nome"/>
+			     </f:facet>
+			     <h:outputText value="a"/>			     
+			   </p:column>
+			  </p:dataTable> 
+			</p:panel>
+
+
+		</h:form>
+	</ui:define>
+</ui:composition>
