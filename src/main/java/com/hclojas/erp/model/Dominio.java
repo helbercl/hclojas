@@ -2,28 +2,25 @@ package com.hclojas.erp.model;
 
 import java.io.Serializable;
 
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-//import javax.persistence.SequenceGenerator;
-//import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
-//import org.hibernate.annotations.NotFound;
-
-//@Entity
-//@Table(name="tb_dominio" , schema="hclojas")
+@Entity
+@Table(name="tb_dominio" , schema="hclojas")
 public class Dominio implements Serializable{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-//	@Id
-//	@SequenceGenerator(name="GENERATOR" ,sequenceName="sq_dominio",initialValue=1, allocationSize=1 ,schema="hclojas")
-//	@GeneratedValue(generator="GENERATOR" , strategy=GenerationType.SEQUENCE)
-//	@Column(name="id_dominio")
+	@Id
+	@SequenceGenerator(name="GENERATOR" ,sequenceName="sq_dominio",initialValue=1, allocationSize=1 ,schema="hclojas")	
+	@GeneratedValue(generator="GENERATOR" , strategy=GenerationType.SEQUENCE)
+	@Column(name="id_dominio")
 	private Integer id;
 	
 //	@Column(name="nm_dominio",nullable=false,unique=false)

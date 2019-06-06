@@ -1,0 +1,21 @@
+1 - gerar chave no site da google recaptcha
+    Chave Site :6LdYi6cUAAAAAM2rA1v0JYQI1_u4zzmZskouSp0l
+  Chave Secreta : 6LdYi6cUAAAAABd14po8240wbUOpF7NIHN2oI3d9
+ 2 - inserir no web.xml
+ 	<context-param>
+		<param-name>primefaces.PRIVATE_CAPTCHA_KEY</param-name>
+		<param-value>6LdYi6cUAAAAABd14po8240wbUOpF7NIHN2oI3d9</param-value>
+	</context-param>
+	<context-param>
+		<param-name>primefaces.PUBLIC_CAPTCHA_KEY</param-name>
+		<param-value>6LdYi6cUAAAAAM2rA1v0JYQI1_u4zzmZskouSp0l</param-value>
+	</context-param>
+ 3 - adicionar localhost a Domínios no site  google recaptcha
+ 4 - inserir dependência no pom.xml do pacote javax.json 
+ <dependency>
+	<groupId>org.glassfish</groupId>
+	<artifactId>javax.json</artifactId>
+	<version>1.0.2</version>
+</dependency>
+ 
+
