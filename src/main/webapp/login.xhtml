@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-
 <ui:composition template="/WEB-INF/templates/layout_login.xhtml"
- xmlns="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:define name="head">
+	</ui:define>
 	<ui:define name="body">
-	<h:form id="frm_login" >
-	        <p:messages showDetail="true"/>
+		<h:form id="frm_login">
+			<p:messages showDetail="true" />			
 			<p:panel id="pn_login" header="Login/Acesso" >
 				<h:panelGrid columns="2" >
-					<p:outputLabel id="opt_login" value="Login:" for="ipt_login"/>
+					<p:outputLabel id="opt_login" value="Login:" for="ipt_login" />
 					<p:inputText id="ipt_login" title="Informe o login!"
 						required="true" requiredMessage="Campo Obrigatorio!" size="20" />
-
 					<p:outputLabel id="opl_senha" value="Senha:" for="psw_senha" />
-					<p:password id="psw_senha" title="Informe a senha!" feedback="true" 
-					promptLabel="Mescle alfanumericos para dificultar a senha!" inline="true" weakLabel="Façil"
-						required="true" requiredMessage="Campo Obrigatorio!" size="20" />
-
-
-
+					<p:password id="psw_senha" title="Informe a senha!" feedback="true"
+						promptLabel="Mescle alfanumericos para dificultar a senha!"
+						inline="true" weakLabel="Façil" goodLabel="Bom" strongLabel="Forte" required="true"
+						requiredMessage="Campo Obrigatorio!" size="20" />
 					<p:outputLabel id="opl_dominio" value="Domínio" for="ipt_dominio" />
 					<p:inputText id="ipt_dominio" title="Informe o Dominio!"
 						required="true" requiredMessage="Campo Obrigatorio!" size="20" />
-						
-				    <p:outputLabel id="opl_captcha" value="Captcha" for="cap_captcha"/>
-				    <p:captcha id="cap_captcha" required="true" theme="blue" label="captcha" valueChangeListener=""/>
+					<p:outputLabel id="opl_captcha" value="Captcha" for="cap_captcha" />
+					<p:captcha id="cap_captcha" required="true" theme="blue"
+						label="captcha" language="pt-br" />
 					<p:outputLabel />
-					
-					<p:commandButton id="btn_acessar" value="Acessar" />
+					<p:commandButton id="btn_acessar" value="Acessar" />					
 				</h:panelGrid>
 			</p:panel>
 		</h:form>

@@ -24,20 +24,20 @@
 						<f:selectItem itemLabel="Ativo" itemValue="S" />
 						<f:selectItem itemLabel="Inativo" itemValue="N" />
 					</p:selectOneRadio>
-					<p:outputLabel/>
-                    <p:commandButton id="cmb_pesquisar" value="Pesquisar"/>
+					<p:outputLabel />
+					<p:commandButton id="cmb_pesquisar" value="Pesquisar" />
 				</h:panelGrid>
 			</p:panel>
-			 <p:separator/>
-			<p:panel id="pn_lista_funcionarios"  header="Lista Funcionarios">
-			  <p:dataTable id="dtb_funcionarios" var="funcionarios" >
-			   <p:column>
-			     <f:facet name="header">
-			         <h:outputText name="Nome"/>
-			     </f:facet>
-			     <h:outputText value="a"/>			     
-			   </p:column>
-			  </p:dataTable> 
+			<p:separator />
+			<p:panel id="pn_lista_funcionarios" header="Lista Funcionarios">
+				<p:dataTable id="dtb_funcionarios" var="funcionarios">
+					<p:column>
+						<f:facet name="header">
+							<h:outputText name="Nome" />
+						</f:facet>
+						<h:outputText value="a" />
+					</p:column>
+				</p:dataTable>
 			</p:panel>
 
 

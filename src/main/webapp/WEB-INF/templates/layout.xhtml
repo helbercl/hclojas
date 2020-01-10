@@ -10,35 +10,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</f:facet>
 	<title>HCLOJAS</title>
-	<h:outputStylesheet library="hclojas" name="styles/custom.css" />
+	<h:outputStylesheet library="hclojas" name="/webapp/resources/META-INF/hclojas/styles/custom.css" />
 	<h:outputStylesheet library="hclojas" name="styles/layout.css" />
 	<h:outputStylesheet library="hclojas" name="styles/components.css" />
-
-		<h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
-		<h:outputScript target="body" library="algaworks" name="javascripts/app.js" />
+	<h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
+	<h:outputScript target="body" library="algaworks" name="javascripts/app.js" />
 </h:head>
-
 <h:body>
-       <div id="header">
-	   <header class="aw-topbar">
-                <h:graphicImage library="hclojas" name="/images/logo.png" />
-                <a href="#" class="aw-toggle  js-toggle"><i class="fa  fa-bars"></i></a>
-        </header>
-        <p:separator/>
-        </div>
-        <div id="menu">
-        <aside class="aw-sidebar  js-sidebar">
-                <ui:include src="menu.xhtml" />
-        </aside>
-        </div>
-        <p:separator/>
-        <div id="conteudo">
-          <ui:insert name="corpo" />
-        </div>
-        <p:separator/>
-        <section class="aw-content  js-content">
-                <ui:insert name="content" />
-        </section>
+	<div id="header">
+		<header class="aw-topbar">
+			<h:graphicImage library="hclojas" name="/images/logo.png" />
+			<a href="#" class="aw-toggle  js-toggle"><i class="fa  fa-bars"></i></a>
+		</header>
+		<p:separator />
+	</div>
+	<div id="menu">
+		<aside class="aw-sidebar  js-sidebar">
+			<ui:include src="menu.xhtml" />
+		</aside>
+	</div>
+	<p:separator />
+	<div id="conteudo">
+		<ui:insert name="corpo" />
+	</div>
+	<p:separator />
+	<section class="aw-content  js-content">
+		<ui:insert name="content" />
+	</section>
 
 </h:body>
 

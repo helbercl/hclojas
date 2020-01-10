@@ -7,9 +7,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 	<ui:define name="corpo">
 		<h:form id="frm_funcionarios">
-			
-			<p:wizard id="wiz_funcionarios" showStepStatus="true"
-				showNavBar="true" backLabel="Voltar" nextLabel="Prosseguir">
+			<p:wizard id="wiz_funcionarios" showStepStatus="true" showNavBar="true" backLabel="Voltar" nextLabel="Prosseguir">
 				<p:tab id="tb_dados_basicos" title="Funcionarios">
 					<p:panel id="pn_dados_basicos" header="Dados Basicos">
 						<h:panelGrid columns="4">
@@ -21,7 +19,7 @@
 
 							<p:outputLabel id="opl_email" value="E-mail:" for="ipt_mail" />
 							<p:inputText id="ipt_mail" title="Informe o e-mail!"
-								required="true" requiredMessage="Campo Obrigatorio!" size="30"  />
+								required="true" requiredMessage="Campo Obrigatorio!" size="30" />
 
 							<p:outputLabel id="opt_login" value="Login:" for="ipt_login" />
 							<p:inputText id="ipt_login" title="Informe o Login!"
@@ -38,7 +36,7 @@
 							</p:selectOneRadio>
 
 							<p:outputLabel id="opt_sexo" for="sor_sexo" value="Sexo:" />
-							<p:selectOneRadio id="sor_sexo" >
+							<p:selectOneRadio id="sor_sexo">
 								<f:selectItem itemLabel="Masculino" itemValue="M" />
 								<f:selectItem itemLabel="Feminino" itemValue="F" />
 							</p:selectOneRadio>
@@ -105,11 +103,8 @@
 							<p:outputLabel id="opt_estado" value="Estado:" for="som_estado" />
 							<p:selectOneMenu id="som_estado" filter="true"
 								filterMatchMode="startsWith">
-								 
 
 							</p:selectOneMenu>
-
-
 						</h:panelGrid>
 					</p:panel>
 				</p:tab>
